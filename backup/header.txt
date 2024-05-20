@@ -1,0 +1,146 @@
+<?php 
+session_start();
+include("api/config.php");
+    $loged = false ;
+    $h_orrder = false;
+    if(isset($_SESSION["userid"])){
+        $loged = true;
+        $session_id = $_SESSION["userid"];
+        $h_sql2 = "SELECT * FROM  tb_order  WHERE member_id = '$session_id'";
+        $h_qr2 = mysqli_query($con,$h_sql2) or die ('error. '. mysqli_error($con));
+        if($h_qr2->num_rows >= 1){
+            $h_orrder = true;
+        }
+    }else{
+        $loged = false ;
+    }
+    
+    $h_sql = "SELECT * FROM  product_type";
+    $h_qr = mysqli_query($con,$h_sql) or die ('error. '. mysqli_error($con));
+?>
+
+<header>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn closeNav" >&times;</a>
+  <div class="overlay-content">
+    <div class="contenz">
+
+    </div>
+    
+    
+   
+   
+  </div>
+  
+</div>
+
+<a id="button"></a>
+    <div class="container-fluid first_row_header">
+
+        <!-- first-row -->
+            <div class="row w-75 mx-auto">
+                <div class="col-md-12 ">
+                    <div class="top_left">
+                        <i class="fas fa-phone-alt"></i> 065-019-3663
+                    </div>
+                    <div class="top_right">
+                    <?php  if($loged == true && $_SESSION["status"] =='2'){ ?>
+                            <span class="top_right_list">
+                                <a href="backend/index.php" class="top_right_list_a"> <i class="fas fa-arrow-up"></i> ระบบบริหาร </a>
+                            </span>
+                        <?php } ?>
+                        <?php  if($loged == true){ ?>
+                            <span class="top_right_list">
+                                <a href="register.php?id=<?php echo $_SESSION["userid"]; ?>" id="profile" class="top_right_list_a"> 
+                                <?php echo $_SESSION["firstname"]." ".$_SESSION["lastname"] ?> </a>
+                            </span>
+                        <?php } ?>
+                        <span class="top_right_list"><a href="cart.php" class="top_right_list_a "> ตระกร้าสินค้า</a> </span>
+                        <?php  if($loged == true && $h_orrder == true){ ?>
+                            <span class="top_right_list"><a href="showorder.php" class="top_right_list_a "> ออร์เดอร์ของฉัน</a> </span>
+                        <?php } ?>
+                        <?php  if($loged == false){ ?>
+                            <span class="top_right_list login" ><a href="" class="top_right_list_a" data-toggle="modal" data-target="#exampleModal"> เข้าสู่ระบบ</a> </span>
+                        <?php } ?>
+                        <?php  if($loged == true){ ?>
+                            <span class="top_right_list"><a href="" id="log-out" type="1" class="top_right_list_a"> ออกจากระบบ </a></span>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- first-row -->
+
+    <!-- seconed-row -->
+    <div class="container-fluid first_row_header">
+            <div class="row w-75 mx-auto">
+                <div class="col-md-5 ">
+                    <a href="index.php" class="a-logo">
+                        <span class="logo"><i class="fas fa-shopping-cart"></i></span>
+                       <b> <span style="font-size:28px;color:#ff6666"><span style="color:#333333;font-size:32px;">ชัช</span>เพ็ทช็อป</span></b>
+                     
+                    </a>
+                </div>
+                <div class="col-md-7 my-3">
+                    <form action="" class="w-75 ml-auto">
+                        <div class="form-row">
+                            <div class="col-md-10">
+                                <div class="input-group w-75 ml-auto">
+                                    <input type="text" class="form-control search-box" id="validationCustomUsername" placeholder="ค้นหาสินค้าเช่น อาหารสุนัข" aria-describedby="inputGroupPrepend" required>
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupPrepend" style="background-color:#ff6666"><i class="fas fa-search"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 ">
+                            <button type="button" class="btn btn-custom" id="btn_shipping">
+                               <span > <i class="fas fa-shopping-basket" ></i></span>
+                                <!-- <span class="badge badge-warning">9</span> -->
+                            </button>
+                                <div class="input-group mx-auto">
+                                        <p class="shoping-card"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+    </div>
+    <!-- seconed-row -->
+
+    <!-- nave -->
+    <div class="container-fluid pl-0 pr-0 row_red_menu">
+        <nav class="navbar navbar-expand-lg navbar-light " style="background-color:#ff6666;">
+       
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto" >
+            <?php   while($h_row2 = mysqli_fetch_assoc($h_qr)){ ?>
+                <li class="nav-item">
+                    <a href="product_type.php?T=<?php echo $h_row2['product_type_id'] ?>" class="nav-link"><?php echo $h_row2['product_type_name'] ?></a>
+                </li>
+            <?php } ?>
+            </ul>
+            
+        </div>
+        </nav>
+    </div>
+    
+    <!--nave -->
+
+
+</header>
+<script>
+    function openNav() {
+        document.getElementById("myNav").style.height = "50%";
+      }
+      
+      function closeNav() {
+        document.getElementById("myNav").style.height = "0%";
+       
+      }
+</script>

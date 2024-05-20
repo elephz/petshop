@@ -1,0 +1,41 @@
+table tr,table tr th, td{
+    border: 1px solid #ddd;
+    color: #555;
+    font-size: 14px;
+    padding: 10px 10px;
+    text-align: center;
+}
+.row-list{
+    padding:20px;
+    background:#f5f5f5;
+    width: 100%;
+    box-shadow: 1px 2px 3px #333;
+    display: grid;
+    grid-template-columns:  3fr 1fr;
+    grid-gap:5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 2px;;
+    
+}
+.row-list:hover{
+//   transform: scale(1.1);
+transform : translateY(1px);
+}
+.grid-item2{
+    text-align: left;
+}
+.hide{
+    display: none;
+}
+.show{
+    display:block;
+}
+.so_pay_btn{
+    padding:15px 40px;
+}
+
+
+i.fa-copy {
+    cursor: pointer;
+}

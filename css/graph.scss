@@ -1,0 +1,68 @@
+.grid-3area{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr  ;
+    grid-gap:20px;
+    width: 90%;
+    justify-content: center;
+    width: 100%;
+   }
+   .grid-3item{
+    box-shadow: 1px 2px 3px #333;
+    transition: 0.3s;
+    text-align: right;
+    position: relative;
+    height:auto;
+    padding:5px;
+    color:white;
+    background:#102526;
+    border-radius: 2px;
+    opacity: 0.95;
+   }
+   .grid-3item:hover{
+     opacity: 1.9;
+   }
+   .title_g{
+       font-size: 14px;
+   }
+   .icon_g{
+       position: absolute;
+       left: 10px;
+       top: 10px;
+       z-index: 1000;
+       text-align: center;
+       color:white;
+       font-size: 36px;
+       padding: 5px;
+       width:auto;
+   }
+   .row_btm_g{
+    border-top: 1px solid gray;
+    width:90%;
+    margin:0px auto;
+    text-align:left;
+    padding:10px;
+   }
+
+   .link_g{
+       text-decoration: none !important;
+       color:white;
+   }
+   .link_g:hover{
+    color:white;
+   }
+   div.card-header{
+        background:#102526;
+        color: white;
+   }
+.list-group-item{
+    cursor:pointer;
+    transition: 0.3s;
+    color:#102526;
+}
+.list-group-item:hover{
+    padding-left:16px;
+}
+.card{
+    box-shadow: 1px 2px 3px #333;
+}
+  

@@ -1,0 +1,31 @@
+<div class="modal fade" id="newbank" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> <b>เพิ่มบัญชีธนาคาร</b> </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="animate py-4"  id="form-newproduct" method="post" >
+            <div class="container">
+            <label for="uname"><b>ชื่อธนาคาร</b></label>
+                <input type="text" class='loin-input '  id="bank_name" required>
+
+            <label for="uname"><b>ประเภทบัญชี</b></label>
+                <input type="text" class='loin-input '  id="bank_type" required> 
+
+            <label for="uname"><b>เลขบัญชี</b></label>
+                <input type="text" class='loin-input '  id="bank_number" >
+
+            <label for="uname"><b>ชื่อ - สุกล</b></label>
+                <input type="text" class='loin-input '  id="ownner_number" >
+                
+         
+            <button class='btn btn-custom' id="btn_new_bank" >บันทึก</button>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>

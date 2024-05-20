@@ -1,0 +1,14 @@
+.grid_product{
+    display: grid;
+    grid-template-columns: 6fr 4fr ;
+    grid-gap:15px;
+    
+ }
+ .product_imd{
+   width: 100%;
+ }
+ .grid-item-gp{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-gap:15px;
+ }

@@ -112,7 +112,7 @@ class PDF extends FPDF
 
 $pdf->AddPage();
 $pdf->Image('logo.jpg',175,5,25,25);
-$compayname = 'ชัชเพ็ทช็อป';
+$compayname = 'Eggshop ';
 $address = 'หมู่ 2 ต.ต้นธง อ.เมือง จ.ลำพูน 51000';
 $tall = '065-019-3663';
 

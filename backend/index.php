@@ -27,13 +27,13 @@ if ($_SESSION["status"]!="2"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Chut-Petshop</title>
+    <title>Eggshop</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@300&family=Prompt:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css" integrity="sha512-f8gN/IhfI+0E9Fc/LKtjVq4ywfhYAVeMGKsECzDUHcFJ5teVwvKTqizm+5a84FINhfrgdvjX8hEJbem2io1iTA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="../css/bn-index.scss">
-    <link rel="stylesheet" href="../css/main.scss">
+    <link rel="stylesheet" href="../css/main1.scss">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -49,7 +49,7 @@ if ($_SESSION["status"]!="2"){
         <div class="row first-row" >
             <div class="col-md-12 ">
                 <div class="top_left">   
-                        <h2 style="color:white;"> <b> <span style="color:#ff6666;font-size:36px;">ชัช</span></b>เพ็ทช็อป</h2>
+                        <h2 style="color:white;"> <b> <span style="color:#ff6666;font-size:36px;">Egg</span></b>Shop</h2>
                 </div>
                 <div class="top_right">
 

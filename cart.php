@@ -84,9 +84,9 @@
 
     </div>
         <?php include("footer.php"); ?>
-       
+        <?php include("modal/address.php"); ?>
 </body>
-<?php include("modal/address.php"); ?>
+
 <script src="js/index.js"></script>
 <script src="js/register.js"></script>
 <script src="js/cart.js"></script>

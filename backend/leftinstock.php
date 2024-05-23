@@ -15,11 +15,6 @@
   
      
 ?>
-<div class="row my-2">
-    <div class="col text-right">
-        <button class="btn-custom py-2 px-4 btntopdf_leftinstock"><i class="fas fa-print"></i> PDF</button>
-    </div>
-</div>
     <div class="row">
         <table class="w-75 mx-auto " id="leftinstock">
             <thead>

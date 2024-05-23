@@ -1,5 +1,5 @@
 <?php 
-define('DB_NAME', 'petshop');
+define('DB_NAME', 'eggshop');
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');
 define('DB_HOST', 'localhost');

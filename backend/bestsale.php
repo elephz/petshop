@@ -8,18 +8,14 @@
        </div>
     </div>
 <?php 
-     $sql = "SELECT product_id,sum(qty) AS qty,sum(total) AS total,status FROM order_detail WHERE status!='1' GROUP BY product_id ORDER BY sum(total) DESC LIMIT 5";
+     $sql = "SELECT product.product_id,sum(order_detail.qty) AS qty,sum(order_detail.total) AS total,order_detail.status, product.product_name as product_name 
+            FROM order_detail 
+                INNER JOIN product on product.product_id = order_detail.product_id 
+            WHERE status!='1' GROUP BY order_detail.product_id 
+            ORDER BY sum(total) DESC LIMIT 5;";
      $qr = mysqli_query($con,$sql) or die (mysqli_error($con));
-          
-         
-  
      
 ?>
-<div class="row my-2">
-    <div class="col text-right">
-        <button class="btn-custom py-2 px-4 btntopdf_bestsale"><i class="fas fa-print"></i> PDF</button>
-    </div>
-</div>
     <div class="row">
         <table class="w-75 mx-auto " id="rp_tb_bestsale">
             <thead>
@@ -50,10 +46,7 @@
                     <td><?= $i++; ?></td>
                     <td><?= $rid; ?></td>
                     <td><?php 
-                        $sql3 = "SELECT product_name FROM product WHERE product_id = '$id'";
-                        $qr3 = mysqli_query($con,$sql3) or die (mysqli_error($con));
-                        $row3 = mysqli_fetch_assoc($qr3);
-                        echo $row3['product_name'];
+                         echo $row['product_name'];
                     ?></td>
                     <td><?= $row["qty"]; ?></td>
                     <td><?=  number_format($row["total"],2); ?></td>

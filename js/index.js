@@ -6,7 +6,6 @@
         logout();
         getcart();
         countitem();
-        getheart();
         $(".sale").addClass("newhide");
        $(".view-item").addClass("f-28");
        $(".like-item").addClass("f-28");
@@ -15,7 +14,7 @@
                 $(".first_row_header").css("background","#102526");
                 $(".first_row_header").css("color","white");
                 $('.list-inline-item').addClass('list-inline-item2').fadeIn();
-                $('.card_c').addClass('card_c2').fadeIn();
+                // $('.card_c').addClass('card_c2').fadeIn();
                 $('.top-logo').addClass('hidelogo').fadeOut();
                 $('.top-logo2').addClass('showlogl').fadeIn();
                 $('.top-logo2').removeClass('hidelogo');
@@ -27,7 +26,7 @@
               $('.list-inline-item').removeClass('list-inline-item2').fadeIn();
               $('.top-logo').removeClass('hidelogo');
               $('.top-logo2').addClass('hidelogo').fadeOut();
-              $('.card_c').removeClass('card_c2').fadeIn();
+              // $('.card_c').removeClass('card_c2').fadeIn();
               $('.top-logo').addClass('showlogl').fadeIn();
               $(".inlogo").css("padding","15px");
               $(".inlogo").css("border","1px solid white");

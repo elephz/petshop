@@ -49,20 +49,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
-                        <button class="btn btn-custom float-right rp_day py-2 px-4 mt-3" ><i class="fas fa-print"></i> PDF</button>
-                    </div>
                 </div>
             <?php }else if($type == "month"){ ?>
                 <input type="month" id='monthpick'  class="loin-input w-25 float-left" value="<?php echo (isset($_GET["val"]) && $_GET["val"] &&  validateMonth($_GET["val"]) ? $_GET["val"] : date("Y-m")); ?>" >
-                <button class="btn btn-custom float-right rp_month py-2 px-4 mt-3" ><i class="fas fa-print"></i> PDF</button>
             <?php }else if($type == "year"){ ?>
                 <select name="cars" id="yearpick"  class="loin-input w-25 float-left">
                         <?php for($i = date("Y")-3; $i <= date("Y");$i++ ){ ?>
                             <option value="<?php echo $i; ?>"  <?php  echo (date("Y") + 543 == $i ? 'selected' : '' ) ?>  selected ><?php echo $i+543; ?></option>
                        <?php } ?>
                 </select>
-                <button class="btn btn-custom rp_year float-right py-2 px-4 mt-3" ><i class="fas fa-print"></i> PDF</button>
             <?php } ?>
         </div>
     </div>
